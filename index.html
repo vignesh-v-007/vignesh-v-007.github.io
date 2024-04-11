@@ -1,77 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Your Name - Data Engineer Portfolio</title>
-<style>
-    body, html {
-        height: 100%;
-        margin: 0;
-        font-family: Arial, sans-serif;
-    }
-    .top-container {
-        background-color: #f1f1f1;
-        padding: 30px;
-        text-align: center;
-    }
-    .content-container {
-        padding: 50px 80px;
-    }
-    .bottom-container {
-        background-color: #f1f1f1;
-        padding: 30px;
-        text-align: center;
-    }
-    .footer {
-        background-color: #333;
-        color: white;
-        text-align: center;
-        padding: 15px;
-    }
-    .skill, .contact {
-        border: 1px solid #ddd;
-        padding: 10px;
-        margin: 5px;
-        display: inline-block;
-        background-color: #eee;
-    }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vignesh Venkatakumar - Cloud Data Engineer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
 <body>
 
-<div class="top-container">
-    <h1>AB.</h1>
-    <h2>Hi, I am Your Name</h2>
-    <h3>Data Science Graduate Student</h3>
-    <p>Introduction about your professional background, expertise, and what you are looking for in your career.</p>
-</div>
+<header>
+    <h1>Vignesh Venkatakumar</h1>
+    <p>Cloud Data Engineer with AWS and Data Engineering Expertise</p>
+</header>
 
-<div class="content-container">
-    <h2>Work Experience</h2>
-    <p>Details about your professional experiences and roles.</p>
-
-    <h2>Projects</h2>
-    <p>Details about the projects you have worked on.</p>
-</div>
-
-<div class="bottom-container">
-    <h3>Skills</h3>
-    <span class="skill">Python</span>
-    <span class="skill">R</span>
-    <span class="skill">SQL</span>
-    <!-- Add more skills -->
-
-    <h3>Contact</h3>
-    <div class="contact">
-        <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-        <!-- Add more contact details -->
+<nav class="navbar">
+    <a href="index.html" class="home-link">Vignesh Venkatakumar</a>
+    <div class="nav-links">
+        <a href="#work-experience">Work Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
     </div>
-</div>
+</nav>
 
-<div class="footer">
-    <p>Created by Your Name | Modified by Your Name</p>
-</div>
+<main>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Proficient Cloud Data Engineer with over 4 years of experience in AWS Cloud Infrastructure, specializing in CI/CD methodologies, and 2 years in managing TrackWise Quality Management System and Crystal Reports. My expertise encompasses developing and refining scalable cloud solutions and data/ETL pipelines, boosting operational efficiency and quick deployment.</p>
+        <div class="about-section">
+            <img src="img\resumeimgcrop.png" alt="Vignesh Venkatakumar" class="profile-picture">
+            <div class="about-content">
+                <h1>Hi, I am Vignesh Venkatakumar</h1>
+                <h2>Data Science Graduate Student</h2>
+                <p>Data Science enthusiast with strong knowledge of statistics, programming in Python, R, and SQL. Nearly five years of experience in data science in PharmSci and Healthcare domain. Currently pursuing Masters of Science with a focus in Data Science from University at Buffalo to refine and enhance my skill set. Looking for opportunities to use my skills in a growth-oriented organization.</p>
+                <div class="about-links">
+                    <a href="img\vigneshvresume.pdf" class="btn" target="_blank">resume
+                        <img src="img\resumeicon.png" alt="Resume">
+                    </a>
+                    <a href="your_linkedIn_profile_url" class="btn" target="_blank">LinkedIn
+                        <img src="img\linkedinicon.png" alt="LinkedIn">
+                    </a>
+                    <a href="your_github_profile_url" class="btn" target="_blank">GitHub
+                        <img src="img\githubicon.png" alt="Github">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skill-category">
+            <h3>AWS Services</h3>
+            <div class="skills-list">
+                <span class="skill">EC2</span>
+                <span class="skill">S3</span>
+                <span class="skill">Lambda</span>
+                <!-- ... and so on for other AWS services -->
+            </div>
+        </div>
+        <!-- Repeat for each skill category -->
+    </section>    
+
+    <!-- Work Experience Section -->
+    <section id="work-experience">
+        <h2>Work Experience</h2>
+        <div class="timeline">
+        <div class="timeline-item">
+            <a href="work-detail.html#research-assistant" class="timeline-content">
+            <h3>Research Assistant</h3>
+            <p>SUNY Research Foundation</p>
+            <p>Sep 2023 - Present</p>
+            </a>
+        </div>
+        <div class="timeline-item">
+            <a href="work-detail.html#data-scientist" class="timeline-content">
+            <h3>Data Scientist</h3>
+            <p>MResult Services</p>
+            <p>Jun 2021 - Dec 2022</p>
+            </a>
+        </div>
+        <!-- More work experiences here -->
+        </div>
+    </section>
+  
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-container">
+        <div class="project">
+            <h3>Car Rental Management System</h3>
+            <p>Built web app (Flask & SQL) for efficient car rentals (booking, inventory, customer mgmt).</p>
+            <!-- Technologies used -->
+            <!-- Links to project, if applicable -->
+        </div>
+        <div class="project">
+            <h3>Predictive Analytics for Restaurant Success</h3>
+            <p>Developed Flask app using machine learning to predict restaurant ratings & online ordering success, aiding strategic decisions.</p>
+            <!-- Technologies used -->
+            <!-- Links to project, if applicable -->
+        </div>
+        <div class="project">
+            <h3>ETL Project</h3>
+            <p>Detailed description of your ETL project goes here.</p>
+            <!-- Technologies used -->
+            <!-- Links to project, if applicable -->
+        </div>
+        </div>
+    </section>
+    
+
+    <section id="education">
+        <h2>Education</h2>
+        <!-- Include education details here -->
+    </section>
+
+    <section id="certifications">
+        <h2>Certifications</h2>
+        <!-- Include certifications here -->
+    </section>
+</main>
+
+<footer>
+    <section id="contact">
+    <p>Contact me at <a href="mailto:vigneshv007@gmail.com">vigneshv007@gmail.com</a> | <a href="https://www.linkedin.com/in/vignesh-venkatakumar/" target="_blank">LinkedIn</a></p>
+    </section>
+</footer>
 
 </body>
 </html>
