@@ -15,7 +15,7 @@ body {
 }
 
 .navbar {
-    background-color: #f8f8f8;
+    background-color: #c7e3e4;
     overflow: hidden;
     display: flex;
     justify-content: space-between;
@@ -25,7 +25,7 @@ body {
 
 .navbar .home-link {
     font-weight: bold;
-    color: #0000ff; /* Bold blue color for your name */
+    color: #5e5e79; /* Bold blue color for your name */
     text-decoration: none;
     font-size: 24px;
 }
@@ -75,6 +75,12 @@ main {
     margin: auto;
 }
 
+
+.role-skills h4, .role-responsibilities h4 {
+  margin-top: 10px;
+  color: #333; /* Dark text for subheadings */
+}
+
 .about-section {
   display: flex;
   align-items: center;
@@ -122,15 +128,15 @@ main {
 
 .about-links .btn {
   border: none;
-  background-color: #abcce2; /* or the color that matches your style */
-  color: #fff;
+  background-color: #ffffff; /* or the color that matches your style */
+  color: #020000;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
 }
 
 .about-links .btn:hover {
-  background-color: #333; /* Darker background on hover */
+  background-color: #639192; /* Darker background on hover */
 }
 
 .btn {
@@ -142,7 +148,7 @@ main {
 }
 
 .btn:hover {
-  background-color: #e8e8e8; /* A subtle hover effect */
+  background-color: #180a0a; /* A subtle hover effect */
 }
 
 
@@ -174,30 +180,79 @@ h2 {
 }
 /* Projects Section */
 #projects {
-    background: #f9f9f9;
-    padding: 50px 0;
-    text-align: center;
-  }
-  
-  .project-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
-  
-  .project {
-    background: #fff;
-    border: 1px solid #ddd;
-    margin: 10px;
-    padding: 20px;
-    width: 30%; /* You can adjust the width for responsiveness */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .project h3 {
-    color: #333;
-    margin-bottom: 15px;
-  }
+  background-color: #f5f5f5; /* Light grey background */
+  padding: 20px;
+}
+
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.project {
+  background-color: white; /* White project cards */
+  border: 1px solid #ddd; /* Light border */
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+.project h3 {
+  color: #333; /* Dark text for the title */
+  margin-bottom: 10px;
+}
+
+.project p {
+  color: #666; /* Dark grey for description */
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.project a img {
+  height: 20px; /* Example size, adjust as needed */
+  width: auto;
+  vertical-align: middle;
+}
+
+.project .btn {
+  border: none;
+  background-color: #ffffff; /* or the color that matches your style */
+  color: #020000;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.project .btn:hover {
+  background-color: #639192; /* Darker background on hover */
+}
+
+.btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: #180a0a; /* A subtle hover effect */
+}
+
+.technologies {
+  margin-top: 10px;
+}
+
+.technologies span {
+  display: inline-block;
+  background-color: #e7e7e7; /* Technology tag background */
+  color: #333; /* Text color for technology tags */
+  border-radius: 2px; /* Rounded corners for tags */
+  padding: 5px;
+  margin-right: 5px;
+  font-size: 0.8rem;
+}
+
   
   /* Responsive */
   @media (max-width: 768px) {
@@ -213,48 +268,52 @@ h2 {
     padding: 20px;
   }
   
-  .timeline {
+  .timeline-container {
     position: relative;
     padding: 20px 0;
-  }
-  
-  .timeline::after {
-    content: '';
-    position: absolute;
-    width: 2px;
-    background-color: #ddd;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    margin-left: -1px;
-  }
-  
-  .timeline-item {
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background-color: #8e979c;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1; /* Ensure line is below dots */
+}
+
+
+.timeline-item {
+    width: 45%; /* Adjust width as needed */
+    margin-bottom: 20px;
     position: relative;
-    width: 50%;
-    padding: 10px 40px;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-    background: #fff;
-    border-radius: 4px;
-    margin-bottom: 10px;
-  }
-  
-  .timeline-item:nth-child(odd) {
+    background-color: #ebebeb;
+    border: 1px solid #ddd;
+    padding: 10px;
+    color: #333; /* Dark grey or black text */
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1); /* Optional: Adds subtle shadow for depth */
+}
+
+.timeline-item:nth-child(odd) {
     left: 0;
-  }
-  
-  .timeline-item:nth-child(even) {
-    left: 50%;
-  }
-  
-  .timeline-content {
+}
+
+.timeline-item:nth-child(even) {
+    left: 55%; /* Adjust this to ensure the text doesn't overlap with the timeline */
+}
+
+.timeline-content {
     text-decoration: none;
     color: #333;
-  }
-  
-  .timeline-content h3 {
+}
+
+.timeline-content h3 {
     color: #333;
-  }
+}
+
 
 #skills {
     background: #f1f1f1;
@@ -269,7 +328,10 @@ h2 {
 
 .skills-list {
     display: inline-block;
-    text-align: left;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
 }
 
 .skill {
@@ -297,7 +359,121 @@ h2 {
     }
 }
 
+.role-skills {
+  display: inline-flex; /* Or inline-flex if you want the container to be inline */
+  flex-wrap: wrap; /* Allows skills to wrap onto the next line */
+  gap: 10px; /* Adjust the space between the skills */
+}
+
+.role-skills ul {
+  list-style-type: none; /* Removes the default list styling */
+  padding: 0; /* Removes default padding */
+  margin: 0; /* Removes default margin */
+}
+
+.role-skills li {
+  background: #f0f0f0; /* A light grey background, or choose your color */
+  padding: 5px 10px; /* Padding inside each skill point */
+  border-radius: 5px; /* Rounded corners for the skill points */
+  font-size: 0.9em; /* Smaller font size for the skills */
+  display: inline-block; /* Displays the list items in-line */
+}
+
+#education {
+  background-color: #f3f3f3; /* Light grey background */
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.education-item {
+  background-color: #ffffff; /* White background for each education item */
+  border: 1px solid #ddd; /* Light grey border */
+  padding: 15px;
+  margin-bottom: 20px; /* Space between education items */
+}
+
+.education-item h3 {
+  color: #333333; /* Dark text for headings */
+  margin-bottom: 5px;
+}
+
+.education-item p {
+  color: #666666; /* Lighter text for details */
+  font-style: italic;
+  margin-bottom: 5px;
+}
+
+.education-item ul {
+  list-style-type: none; /* Remove default list styling */
+  padding: 0;
+  margin: 0;
+}
+
+.education-item ul li {
+  background: url('path-to-bullet-image.png') no-repeat left center; /* Custom bullet image */
+  padding-left: 25px; /* Adjust according to your custom bullet size */
+  margin-bottom: 5px; /* Space between list items */
+}
+
+/* You can also add media queries to make it responsive */
+@media (max-width: 768px) {
+  #education {
+      padding: 10px;
+  }
+
+  .education-item {
+      padding: 10px;
+  }
+}
+
+
+#certifications {
+  background-color: #f8f8f8; /* Light grey background */
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.certification-list {
+  list-style: none; /* Removes default list styling */
+  padding: 0;
+}
+
+.certification-list li {
+  background-color: #fff; /* White background for list items */
+  border: 1px solid #d1d1d1; /* Light grey border */
+  padding: 10px;
+  margin-bottom: 10px; /* Space between certification items */
+}
+
+.certification-list h3 {
+  color: #333; /* Dark grey text for certification name */
+  margin: 0;
+}
+
+.certification-list p {
+  color: #666; /* Medium grey for date and details */
+  font-style: italic;
+  margin: 5px 0 0 0; /* Small margin on top of the date */
+}
+
+/* Optional: Add a hover effect for list items */
+.certification-list li:hover {
+  background-color: #e9e9e9; /* Slightly darker background on hover */
+  cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #certifications {
+      padding: 10px;
+  }
   
+  .certification-list li {
+      padding: 8px;
+  }
+}
+
+
 /* Subtle Footer Styles */
 footer {
     background: #f8f8f8; /* Subtle background color */
