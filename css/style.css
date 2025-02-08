@@ -1,516 +1,116 @@
-/* Reset some basic elements */
-body, h1, h2, h3, p, ul, li, a {
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-}
-
-/* Use a sans-serif font */
+/* Apply a modern dark gradient background */
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    background: #fff;
-    color: #333;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  color: #e0e0e0;
 }
 
+/* Navbar Enhancements */
 .navbar {
-    background-color: #c7e3e4;
-    overflow: hidden;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-}
-
-.navbar .home-link {
-    font-weight: bold;
-    color: #5e5e79; /* Bold blue color for your name */
-    text-decoration: none;
-    font-size: 24px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Glass effect */
+  padding: 15px 20px;
 }
 
 .navbar .nav-links a {
-    text-decoration: none;
-    color: #333;
-    padding-left: 15px;
+  color: #ffffff;
+  font-size: 18px;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
 }
 
 .navbar .nav-links a:hover {
-    text-decoration: underline;
+  color: #ff9800;
+  transform: scale(1.05);
 }
 
-/* Top header styling */
-header {
-    background: #f1f1f1;
-    color: #333;
-    padding-top: 20px;
-    text-align: center;
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
 }
 
-/* Logo or Initials */
-header h1 {
-    font-size: 3em;
-    margin-bottom: 20px;
+.hero h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3em;
+  font-weight: bold;
+  color: #ff9800;
+  border-right: 3px solid orange;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
 }
 
-/* Navigation menu */
-nav {
-    background: #e8e8e8;
-    overflow: auto;
-    padding: 10px 0;
-    text-align: center;
+.hero p {
+  font-size: 1.2em;
+  font-weight: 400;
+  color: #ddd;
 }
 
-nav a {
-    color: #333;
-    padding: 10px 20px;
-    display: inline-block;
-}
-
-/* Main content styling */
-main {
-    padding: 40px;
-    max-width: 1200px;
-    margin: auto;
-}
-
-
-.role-skills h4, .role-responsibilities h4 {
-  margin-top: 10px;
-  color: #333; /* Dark text for subheadings */
-}
-
-.about-section {
-  display: flex;
-  align-items: center;
-  padding: 50px;
-  background-color: #f1f1f1; /* or any color you prefer */
-}
-
-.profile-picture {
-  max-width: 200px; /* Adjust the max-width as necessary */
-  height: auto; /* This will ensure the height scales proportionally */
-  border-radius: 100%; /* Optional: if you want a circular image */
-  display: block; /* Use block to apply margins */
-  margin: 0 auto 20px auto; /* Center the image if within a container */
-  margin-right: 20px;
-}
-
-.about-section p {
-  /* Add top margin if necessary or you can adjust the bottom margin of the image above */
-  margin-top: 20px; /* This adds space above the paragraph, adjust as needed */
-}
-
-
-.about-content h1 {
-  color: #6284b6; /* or the color that matches the picture's background */
-  font-size: 2.5em; /* Adjust size as needed */
-}
-
-.about-content h2 {
-  font-size: 1.5em;
-  color: #333; /* or any color you prefer */
-  margin-bottom: 20px;
-}
-
-.about-content p {
-  font-size: 1em;
-  color: #666; /* or any color you prefer */
-  margin-bottom: 20px;
-}
-
-.about-links a img {
-  height: 20px; /* Example size, adjust as needed */
-  width: auto;
-  vertical-align: middle;
-}
-
-.about-links .btn {
-  border: none;
-  background-color: #ffffff; /* or the color that matches your style */
-  color: #020000;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.about-links .btn:hover {
-  background-color: #639192; /* Darker background on hover */
-}
-
-.btn {
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  padding: 5px;
-  border-radius: 5px;
-}
-
-.btn:hover {
-  background-color: #180a0a; /* A subtle hover effect */
-}
-
-
-/* Work experience and project sections */
-section {
-    margin-bottom: 40px;
-}
-
-/* Headings within sections */
-h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-/* Contact section */
-.contact {
-    text-align: center;
-    padding: 40px 0;
-}
-
-/* Skills tags styling */
-.skill-tag {
-    display: inline-block;
-    background: #e8e8e8;
-    padding: 5px 15px;
-    margin: 5px;
-    border-radius: 3px;
-    font-size: 0.9em;
-}
-/* Projects Section */
-#projects {
-  background-color: #f5f5f5; /* Light grey background */
-  padding: 20px;
-}
-
+/* Project Grid Layout */
 .project-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 20px;
+  padding: 20px;
 }
 
 .project {
-  background-color: white; /* White project cards */
-  border: 1px solid #ddd; /* Light border */
-  padding: 15px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  transition: all 0.3s ease-in-out;
 }
 
-.project h3 {
-  color: #333; /* Dark text for the title */
-  margin-bottom: 10px;
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.project p {
-  color: #666; /* Dark grey for description */
-  font-size: 0.9rem;
-  margin-bottom: 10px;
-}
-
-.project a img {
-  height: 20px; /* Example size, adjust as needed */
-  width: auto;
-  vertical-align: middle;
-}
-
-.project .btn {
-  border: none;
-  background-color: #ffffff; /* or the color that matches your style */
-  color: #020000;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.project .btn:hover {
-  background-color: #639192; /* Darker background on hover */
-}
-
-.btn {
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  padding: 5px;
-  border-radius: 5px;
-}
-
-.btn:hover {
-  background-color: #180a0a; /* A subtle hover effect */
-}
-
-.technologies {
-  margin-top: 10px;
-}
-
-.technologies span {
-  display: inline-block;
-  background-color: #e7e7e7; /* Technology tag background */
-  color: #333; /* Text color for technology tags */
-  border-radius: 2px; /* Rounded corners for tags */
-  padding: 5px;
-  margin-right: 5px;
-  font-size: 0.8rem;
-}
-
-  
-  /* Responsive */
-  @media (max-width: 768px) {
-    .project {
-      width: 100%; /* Full width on mobile */
-    }
-  }
-  /* Work Experience Section */
-#work-experience {
-    max-width: 1200px;
-    margin: auto;
-    position: relative;
-    padding: 20px;
-  }
-  
-  .timeline-container {
-    position: relative;
-    padding: 20px 0;
-}
-
-.timeline::after {
-  content: '';
-  position: absolute;
-  width: 2px;
-  background-color: #8e979c;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1; /* Ensure line is below dots */
-}
-
-
-.timeline-item {
-    width: 45%; /* Adjust width as needed */
-    margin-bottom: 20px;
-    position: relative;
-    background-color: #ebebeb;
-    border: 1px solid #ddd;
-    padding: 10px;
-    color: #333; /* Dark grey or black text */
-    box-shadow: 0 3px 6px rgba(0,0,0,0.1); /* Optional: Adds subtle shadow for depth */
-}
-
-.timeline-item:nth-child(odd) {
-    left: 0;
-}
-
-.timeline-item:nth-child(even) {
-    left: 55%; /* Adjust this to ensure the text doesn't overlap with the timeline */
-}
-
-.timeline-content {
-    text-decoration: none;
-    color: #333;
-}
-
-.timeline-content h3 {
-    color: #333;
-}
-
-
-#skills {
-    background: #f1f1f1;
-    padding: 40px 0;
-    text-align: center;
-}
-
-.skill-category h3 {
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.skills-list {
-    display: inline-block;
-    text-align: center;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-}
-
+/* Skill Badges */
 .skill {
-    display: inline-block;
-    background: #fff;
-    border: 1px solid #ddd;
-    padding: 8px 16px;
-    margin: 2px;
-    border-radius: 4px;
-    font-size: 0.9em;
-    transition: all 0.3s ease; /* Smooth transition for hover effect */
+  display: inline-block;
+  padding: 8px 12px;
+  background: #ff9800;
+  color: white;
+  border-radius: 15px;
+  font-size: 14px;
+  margin: 5px;
 }
 
-.skill:hover {
-    background-color: #e9ecef; /* A slight change in background color */
-    transform: translateY(-5px); /* Moves the skill box up by 5px */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* Adds shadow to make it 'pop' */
-}
-
-/* Add responsive behavior */
-@media (max-width: 768px) {
-    .skills-list {
-        display: block;
-        margin: auto;
-    }
-}
-
-.role-skills {
-  display: inline-flex; /* Or inline-flex if you want the container to be inline */
-  flex-wrap: wrap; /* Allows skills to wrap onto the next line */
-  gap: 10px; /* Adjust the space between the skills */
-}
-
-.role-skills ul {
-  list-style-type: none; /* Removes the default list styling */
-  padding: 0; /* Removes default padding */
-  margin: 0; /* Removes default margin */
-}
-
-.role-skills li {
-  background: #f0f0f0; /* A light grey background, or choose your color */
-  padding: 5px 10px; /* Padding inside each skill point */
-  border-radius: 5px; /* Rounded corners for the skill points */
-  font-size: 0.9em; /* Smaller font size for the skills */
-  display: inline-block; /* Displays the list items in-line */
-}
-
-#education {
-  background-color: #f3f3f3; /* Light grey background */
-  padding: 20px;
-  margin: 20px 0;
-}
-
-.education-item {
-  background-color: #ffffff; /* White background for each education item */
-  border: 1px solid #ddd; /* Light grey border */
-  padding: 15px;
-  margin-bottom: 20px; /* Space between education items */
-}
-
-.education-item h3 {
-  color: #333333; /* Dark text for headings */
-  margin-bottom: 5px;
-}
-
-.education-item p {
-  color: #666666; /* Lighter text for details */
-  font-style: italic;
-  margin-bottom: 5px;
-}
-
-.education-item ul {
-  list-style-type: none; /* Remove default list styling */
-  padding: 0;
-  margin: 0;
-}
-
-.education-item ul li {
-  background: url('path-to-bullet-image.png') no-repeat left center; /* Custom bullet image */
-  padding-left: 25px; /* Adjust according to your custom bullet size */
-  margin-bottom: 5px; /* Space between list items */
-}
-
-/* You can also add media queries to make it responsive */
-@media (max-width: 768px) {
-  #education {
-      padding: 10px;
-  }
-
-  .education-item {
-      padding: 10px;
-  }
-}
-
-
-#certifications {
-  background-color: #f8f8f8; /* Light grey background */
-  padding: 20px;
-  margin: 20px 0;
-}
-
-.certification-list {
-  list-style: none; /* Removes default list styling */
-  padding: 0;
-}
-
-.certification-list li {
-  background-color: #fff; /* White background for list items */
-  border: 1px solid #d1d1d1; /* Light grey border */
-  padding: 10px;
-  margin-bottom: 10px; /* Space between certification items */
-}
-
-.certification-list h3 {
-  color: #333; /* Dark grey text for certification name */
-  margin: 0;
-}
-
-.certification-list p {
-  color: #666; /* Medium grey for date and details */
-  font-style: italic;
-  margin: 5px 0 0 0; /* Small margin on top of the date */
-}
-
-/* Optional: Add a hover effect for list items */
-.certification-list li:hover {
-  background-color: #e9e9e9; /* Slightly darker background on hover */
-  cursor: pointer;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  #certifications {
-      padding: 10px;
-  }
-  
-  .certification-list li {
-      padding: 8px;
-  }
-}
-
-div.role-responsibilities > ul {
-  list-style-type: disc !important;
-  padding-left: 40px !important;
-}
-
-div.role-responsibilities > ul > li {
-  margin-bottom: 10px !important;
-  line-height: 1.6 !important;
-}
-
-
-/* Subtle Footer Styles */
+/* Footer Styling */
 footer {
-    background: #f8f8f8; /* Subtle background color */
-    color: #333; /* Subtle text color */
-    text-align: center;
-    padding: 10px 0;
-    margin-top: auto; /* Push footer to the bottom */
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+}
+
+/* Social Media Icons */
+footer a {
+  color: white;
+  font-size: 20px;
+  margin: 0 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+footer a:hover {
+  color: #ff9800;
+}
+
+/* Typing Effect Animation */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      text-align: center;
   }
-  
-  footer p {
-    margin: 10px 0;
-  }
-  
-  footer a {
-    color: #333;
-  }
-  
-  /* Add styles for hover state */
-  footer a:hover {
-    color: #0066cc;
-  }
-  
-  /* Responsive styles if needed */
-  @media (max-width: 768px) {
-    .timeline-item, .timeline-item:nth-child(even) {
-      width: 100%;
-      left: 0;
-    }
-  }
-  
-  
+}
