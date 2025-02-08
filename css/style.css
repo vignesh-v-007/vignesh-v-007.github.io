@@ -1,48 +1,61 @@
-/* Apply a modern dark gradient background */
+/* -------- Global Styling -------- */
 body {
   font-family: 'Inter', sans-serif;
   background: linear-gradient(135deg, #1f1c2c, #928dab);
   color: #e0e0e0;
+  margin: 0;
+  padding: 0;
 }
 
-/* Navbar Enhancements */
+/* -------- Navbar Fixes -------- */
 .navbar {
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 1000;
-  background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
-  backdrop-filter: blur(10px); /* Glass effect */
+  background: rgba(0, 0, 0, 0.8); /* Darker navbar for readability */
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 15px 20px;
 }
 
+.navbar .home-link {
+  font-weight: bold;
+  font-size: 24px;
+  color: #ff9800;
+  text-decoration: none;
+}
+
+.navbar .nav-links {
+  display: flex;
+  gap: 20px;
+}
+
 .navbar .nav-links a {
-  color: #ffffff;
-  font-size: 18px;
+  color: white;
+  font-size: 16px;
   text-transform: uppercase;
   transition: all 0.3s ease-in-out;
 }
 
 .navbar .nav-links a:hover {
   color: #ff9800;
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
-/* Hero Section */
+/* -------- Hero Section -------- */
 .hero {
   text-align: center;
-  padding: 100px 20px;
+  padding: 120px 20px;
 }
 
 .hero h1 {
   font-family: 'Montserrat', sans-serif;
-  font-size: 3em;
+  font-size: 2.5em;
   font-weight: bold;
   color: #ff9800;
-  border-right: 3px solid orange;
-  white-space: nowrap;
-  overflow: hidden;
-  animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
 }
 
 .hero p {
@@ -51,10 +64,46 @@ body {
   color: #ddd;
 }
 
-/* Project Grid Layout */
+/* -------- Fixing Image Issues -------- */
+.profile-picture {
+  max-width: 180px;
+  height: auto;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+/* -------- About Section -------- */
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  max-width: 80%;
+  margin: auto;
+}
+
+.about-content {
+  max-width: 600px;
+}
+
+.about-content h1 {
+  font-size: 2.2em;
+  color: #ff9800;
+}
+
+.about-content h2 {
+  font-size: 1.5em;
+  color: #ddd;
+}
+
+/* -------- Project Grid Layout -------- */
 .project-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 20px;
   padding: 20px;
 }
@@ -64,6 +113,13 @@ body {
   border-radius: 10px;
   padding: 20px;
   transition: all 0.3s ease-in-out;
+  text-align: center;
+}
+
+.project img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
 
 .project:hover {
@@ -71,7 +127,7 @@ body {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Skill Badges */
+/* -------- Skill Badges -------- */
 .skill {
   display: inline-block;
   padding: 8px 12px;
@@ -82,7 +138,7 @@ body {
   margin: 5px;
 }
 
-/* Footer Styling */
+/* -------- Footer Styling -------- */
 footer {
   background: #222;
   color: white;
@@ -90,27 +146,19 @@ footer {
   padding: 15px 0;
 }
 
-/* Social Media Icons */
-footer a {
-  color: white;
-  font-size: 20px;
-  margin: 0 10px;
-  transition: all 0.3s ease-in-out;
-}
-
-footer a:hover {
-  color: #ff9800;
-}
-
-/* Typing Effect Animation */
-@keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
-}
-
+/* -------- Responsive Fixes -------- */
 @media (max-width: 768px) {
   .navbar {
       flex-direction: column;
       text-align: center;
+  }
+
+  .about-section {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .profile-picture {
+      max-width: 140px;
   }
 }
