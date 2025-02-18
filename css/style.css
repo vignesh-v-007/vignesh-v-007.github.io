@@ -83,7 +83,7 @@ color: #333; /* Dark text for subheadings */
 .about-section {
 display: flex;
 align-items: center;
-padding: 50px;
+padding: 40px;
 background-color: #f1f1f1; /* or any color you prefer */
 }
 
@@ -153,7 +153,7 @@ background-color: #180a0a; /* A subtle hover effect */
 
 /* Work experience and project sections */
 section {
-  margin-bottom: 40px;
+  margin-bottom: 15px;
 }
 
 /* Headings within sections */
@@ -344,11 +344,7 @@ z-index: 1; /* Ensure line is below dots */
   transition: all 0.3s ease; /* Smooth transition for hover effect */
 }
 
-.skill:hover {
-  background-color: #e9ecef; /* A slight change in background color */
-  transform: translateY(-5px); /* Moves the skill box up by 5px */
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* Adds shadow to make it 'pop' */
-}
+
 
 /* Add responsive behavior */
 @media (max-width: 768px) {
@@ -426,51 +422,153 @@ margin-bottom: 5px; /* Space between list items */
 }
 
 
+/* Certifications Section */
 #certifications {
-background-color: #f8f8f8; /* Light grey background */
-padding: 20px;
-margin: 20px 0;
+  background-color: #f8f8f8;
+  padding: 15px 15px;
+  margin: 10px 0;
+  text-align: center;
 }
 
+.certification-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 15px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.cert-button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 15px;
+  background: #16679a;
+  color: white;
+  font-size: 1em;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out;
+}
+
+.cert-button:hover {
+  background: #135c87;
+}
+
+
 .certification-list {
-list-style: none; /* Removes default list styling */
-padding: 0;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
 }
 
 .certification-list li {
-background-color: #fff; /* White background for list items */
-border: 1px solid #d1d1d1; /* Light grey border */
-padding: 10px;
-margin-bottom: 10px; /* Space between certification items */
+  background-color: #fff;
+  border: 1px solid #d1d1d1;
+  padding: 12px;
+  flex: 1 1 45%; /* Takes up 45% of container */
+  min-width: 280px;
+  max-width: 340px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
 }
 
+.certification-list li:hover {
+  background-color: #e9e9e9;
+  transform: translateY(-3px);
+}
+
+/* Title & Year */
 .certification-list h3 {
-color: #333; /* Dark grey text for certification name */
-margin: 0;
+  font-size: 1.1em;
+  color: #333;
 }
 
 .certification-list p {
-color: #666; /* Medium grey for date and details */
-font-style: italic;
-margin: 5px 0 0 0; /* Small margin on top of the date */
+  color: #666;
+  font-size: 0.9em;
+  font-style: italic;
 }
 
-/* Optional: Add a hover effect for list items */
-.certification-list li:hover {
-background-color: #e9e9e9; /* Slightly darker background on hover */
-cursor: pointer;
+/* Certification Popup (Fixed to Prevent Grid Issues) */
+.certification-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
 }
 
-/* Responsive adjustments */
+.popup-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 550px;
+  width: 90%;
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.popup-content h3 {
+  font-size: 1.4em;
+  color: #16679a;
+  margin-bottom: 10px;
+}
+
+.popup-content p {
+  font-size: 1em;
+  color: #444;
+}
+
+.popup-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-top: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: #16679a;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2em;
+}
+
+.close-btn:hover {
+  background: #135c87;
+}
+
+/* Responsive Fix for Small Screens */
 @media (max-width: 768px) {
-#certifications {
-    padding: 10px;
+  .certification-container {
+    grid-template-columns: repeat(1, 1fr); /* Single column on small screens */
+  }
+
+  .certification-list li {
+    width: 100%;
+  }
 }
 
-.certification-list li {
-    padding: 8px;
-}
-}
 
 div.role-responsibilities > ul {
 list-style-type: disc !important;

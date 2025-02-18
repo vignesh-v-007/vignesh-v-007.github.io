@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
 <body>
+<script src="script.js"></script>
 
 <header>
     <h3>Vignesh Venkatakumar</h3>
@@ -32,7 +33,7 @@
             <img src="img/resumeimgcrop.png" alt="Vignesh Venkatakumar" class="profile-picture">
             <div class="about-content">
                 <h1>Hi, I am Vignesh Venkatakumar</h1>
-                <h2>Data Science Graduate</h2>
+                <h2>AWS Data Engineer</h2>
                 <p>Experienced Cloud Data Engineer with a robust background in designing and implementing AWS-based cloud solutions, CI/CD pipelines, and efficient data engineering practices. Skilled in Python, ETL workflows, and optimizing cloud architectures. As a data science graduate, I bring a strong analytical foundation to my work in cloud computing and data infrastructure development. I am actively seeking opportunities to bring my specialized skills to a growth-oriented organization.</p>
                 <div class="about-links">
                     <a href="img/vigneshresume.pdf" class="btn" target="_blank">Resume
@@ -52,32 +53,45 @@
     <section id="certifications">
         <h2>Certifications</h2>
         <ul class="certification-list">
-            <li>
-                <h3>DataExpert.io Data Engineering Bootcamp Certificate</h3>
+            <li onclick="openPopup('img/certificate_dataexpert.png', 'DataExpert.io Data Engineering Bootcamp Certificate', 'https://learn.dataexpert.io/certification/vigneshv00792843/free-bootcamp-completion')">
+                <h3>DataExpert.io Certificate</h3>
                 <p>2025</p>
             </li>
-            <li>
-                <h3>AWS Certified Data Engineer Associate</h3>
+            
+            <li onclick="openPopup('img/certificate_dataengineer.jpg', 'AWS Certified Data Engineer Associate', 'https://www.credly.com/badges/f852a538-83d5-4cfd-bc2a-b1dce2beccd3/linked_in_profile')">
+                <h3>AWS Certified Data Engineer</h3>
                 <p>2024</p>
             </li>
-            <li>
-                <h3>AWS Certified DevOps Engineer Professional</h3>
+            <li onclick="openPopup('img/certificate_devops.jpg', 'AWS Certified DevOps Engineer Professional', 'https://www.credly.com/badges/63d1554b-84da-418f-8253-2d9f11483a06/linked_in_profile')">
+                <h3>AWS Certified DevOps Engineer</h3>
                 <p>2022</p>
             </li>
-            <li>
-                <h3>AWS Certified Solutions Architect Associate</h3>
+            <li onclick="openPopup('img/certificate_solutionsarchitect.jpg', 'AWS Certified Solutions Architect Associate', 'https://www.credly.com/badges/f74aca8c-2f3e-47fb-a7b8-91a15030c36a/linked_in_profile')">
+                <h3>AWS Certified Solutions Architect</h3>
                 <p>2019</p>
             </li>
-            <li>
+            <li onclick="openPopup('img/certificate_cloudcomputing.jpg', 'Cloud Computing Certification', 'https://www.mygreatlearning.com/certificate/LVUXPPGZ')">
                 <h3>Cloud Computing Certification</h3>
                 <p>Great Learning - 2019</p>
             </li>
             <li>
-                <h3>Vantage Level Business English Certificate (BEC)</h3>
+                <h3>Business English Certificate (BEC)</h3>
                 <p>Cambridge University - 2015</p>
             </li>
         </ul>
+    
+        <!-- Popup Modal -->
+        <div id="cert-popup" class="certification-popup">
+            <div class="popup-content">
+                <span class="close-btn" onclick="closePopup()">✖</span>
+                <h3 id="cert-title"></h3>
+                <img id="cert-image" src="" alt="Certification">
+                <a id="cert-link" href="#" target="_blank" class="cert-button">View Certification</a>
+            </div>
+        </div>
     </section>
+    
+    
 
     <section id="skills">
         <h2>Skills</h2>
