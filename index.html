@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
 <body>
+<script src="script.js"></script>
 
 <header>
     <h3>Vignesh Venkatakumar</h3>
@@ -32,7 +33,7 @@
             <img src="img/resumeimgcrop.png" alt="Vignesh Venkatakumar" class="profile-picture">
             <div class="about-content">
                 <h1>Hi, I am Vignesh Venkatakumar</h1>
-                <h2>Data Science Graduate</h2>
+                <h2>AWS Data Engineer</h2>
                 <p>Experienced Cloud Data Engineer with a robust background in designing and implementing AWS-based cloud solutions, CI/CD pipelines, and efficient data engineering practices. Skilled in Python, ETL workflows, and optimizing cloud architectures. As a data science graduate, I bring a strong analytical foundation to my work in cloud computing and data infrastructure development. I am actively seeking opportunities to bring my specialized skills to a growth-oriented organization.</p>
                 <div class="about-links">
                     <a href="img/vigneshresume.pdf" class="btn" target="_blank">Resume
@@ -52,102 +53,134 @@
     <section id="certifications">
         <h2>Certifications</h2>
         <ul class="certification-list">
-            <li>
-                <h3>DataExpert.io Data Engineering Bootcamp Certificate</h3>
+            <li onclick="openPopup('img/certificate_dataexpert.png', 'DataExpert.io Data Engineering Bootcamp Certificate', 'https://learn.dataexpert.io/certification/vigneshv00792843/free-bootcamp-completion')">
+                <h3>DataExpert.io Certificate</h3>
                 <p>2025</p>
             </li>
-            <li>
-                <h3>AWS Certified Data Engineer Associate</h3>
+            
+            <li onclick="openPopup('img/certificate_dataengineer.jpg', 'AWS Certified Data Engineer Associate', 'https://www.credly.com/badges/f852a538-83d5-4cfd-bc2a-b1dce2beccd3/linked_in_profile')">
+                <h3>AWS Certified Data Engineer</h3>
                 <p>2024</p>
             </li>
-            <li>
-                <h3>AWS Certified DevOps Engineer Professional</h3>
+            <li onclick="openPopup('img/certificate_devops.jpg', 'AWS Certified DevOps Engineer Professional', 'https://www.credly.com/badges/63d1554b-84da-418f-8253-2d9f11483a06/linked_in_profile')">
+                <h3>AWS Certified DevOps Engineer</h3>
                 <p>2022</p>
             </li>
-            <li>
-                <h3>AWS Certified Solutions Architect Associate</h3>
+            <li onclick="openPopup('img/certificate_solutionsarchitect.jpg', 'AWS Certified Solutions Architect Associate', 'https://www.credly.com/badges/f74aca8c-2f3e-47fb-a7b8-91a15030c36a/linked_in_profile')">
+                <h3>AWS Certified Solutions Architect</h3>
                 <p>2019</p>
             </li>
-            <li>
+            <li onclick="openPopup('img/certificate_cloudcomputing.jpg', 'Cloud Computing Certification', 'https://www.mygreatlearning.com/certificate/LVUXPPGZ')">
                 <h3>Cloud Computing Certification</h3>
                 <p>Great Learning - 2019</p>
             </li>
             <li>
-                <h3>Vantage Level Business English Certificate (BEC)</h3>
+                <h3>Business English Certificate (BEC)</h3>
                 <p>Cambridge University - 2015</p>
             </li>
         </ul>
+    
+        <!-- Popup Modal -->
+        <div id="cert-popup" class="certification-popup">
+            <div class="popup-content">
+                <span class="close-btn" onclick="closePopup()">✖</span>
+                <h3 id="cert-title"></h3>
+                <img id="cert-image" src="" alt="Certification">
+                <a id="cert-link" href="#" target="_blank" class="cert-button">View Certification</a>
+            </div>
+        </div>
     </section>
+    
+    
 
     <section id="skills">
         <h2>Skills</h2>
+    
         <div class="skill-category">
             <h3>AWS Services</h3>
-            <div class="skills-list">
-                <span class="skill">EC2</span>
-                <span class="skill">S3</span>
-                <span class="skill">Lambda</span>
-                <span class="skill">RDS</span>
-                <span class="skill">IAM</span>
-                <span class="skill">Glue</span>
-                <span class="skill">ECS</span>
-                <span class="skill">CloudFormation</span>
-                <span class="skill">CloudWatch</span>
-                <span class="skill">CodePipeline</span>
-                <span class="skill">Elastic Beanstalk</span>
-                <span class="skill">VPC</span>
-                <span class="skill">DMS</span>
-                <span class="skill">API Gateway</span>
-                <span class="skill">Kinesis</span>
-                <span class="skill">Athena</span>
-                <span class="skill">SQS</span>
-                <span class="skill">SNS</span>
-            </div>
-            <h3>Database Management</h3>
-            <div class="skills-list">
-                <span class="skill">SQL and NoSQL Databases</span>
-                <span class="skill">PostgreSQL</span>
-                <span class="skill">DynamoDB</span>
-                <span class="skill">Data Migration</span>
-            </div>
-            <h3>Data Engineering</h3>
-            <div class="skills-list">
-                <span class="skill">ETL Pipeline Design</span>
-                <span class="skill">Spark</span>
-                <span class="skill">Workflow Automation</span>
-            </div>
-            <h3>Programming</h3>
-            <div class="skills-list">
-                <span class="skill">Python</span>
-                <span class="skill">Boto3</span>
-                <span class="skill">PySpark</span>
-                <span class="skill">Flask</span>
-            </div>
-            <h3>Orchestration Tools</h3>
-            <div class="skills-list">
-                <span class="skill">AWS Step Functions</span>
-                <span class="skill">Apache Airflow</span>
-                <span class="skill">Terraform</span>
-            </div>
-            <h3>DevOps Practices</h3>
-            <div class="skills-list">
-                <span class="skill">Continuous Integration/Continuous Deployment (CI/CD)</span>
-                <span class="skill">Docker Containerization</span>
-                <span class="skill">GitHub</span>
-                <span class="skill">Monitoring and Logging</span>
-            </div>
-            <h3>Quality Management and Reporting Tools</h3>
-            <div class="skills-list">
-                <span class="skill">TrackWise 8.7</span>
-                <span class="skill">Crystal Reports</span>
-                <span class="skill">Tableau</span>
-                <span class="skill">Quicksight</span>
-                <span class="skill">JIRA</span>
-                <span class="skill">Service Now</span>
-            </div>
+            <ul class="skills-list">
+                <li>EC2</li>
+                <li>S3</li>
+                <li>Lambda</li>
+                <li>RDS</li>
+                <li>IAM</li>
+                <li>Glue</li>
+                <li>ECS</li>
+                <li>CloudFormation</li>
+                <li>CloudWatch</li>
+                <li>CodePipeline</li>
+                <li>Elastic Beanstalk</li>
+                <li>VPC</li>
+                <li>DMS</li>
+                <li>API Gateway</li>
+                <li>Kinesis</li>
+                <li>Athena</li>
+                <li>SQS</li>
+                <li>SNS</li>
+            </ul>
         </div>
-        <!-- Repeat for each skill category -->
-    </section>    
+    
+        <div class="skill-category">
+            <h3>Database Management</h3>
+            <ul class="skills-list">
+                <li>SQL & NoSQL</li>
+                <li>PostgreSQL</li>
+                <li>DynamoDB</li>
+                <li>Data Migration</li>
+            </ul>
+        </div>
+    
+        <div class="skill-category">
+            <h3>Data Engineering</h3>
+            <ul class="skills-list">
+                <li>ETL Pipeline Design</li>
+                <li>Spark</li>
+                <li>Workflow Automation</li>
+            </ul>
+        </div>
+    
+        <div class="skill-category">
+            <h3>Programming</h3>
+            <ul class="skills-list">
+                <li>Python</li>
+                <li>Boto3</li>
+                <li>PySpark</li>
+                <li>Flask</li>
+            </ul>
+        </div>
+    
+        <div class="skill-category">
+            <h3>Orchestration Tools</h3>
+            <ul class="skills-list">
+                <li>AWS Step Functions</li>
+                <li>Apache Airflow</li>
+                <li>Terraform</li>
+            </ul>
+        </div>
+    
+        <div class="skill-category">
+            <h3>DevOps Practices</h3>
+            <ul class="skills-list">
+                <li>CI/CD</li>
+                <li>Docker</li>
+                <li>GitHub</li>
+                <li>Monitoring & Logging</li>
+            </ul>
+        </div>
+    
+        <div class="skill-category">
+            <h3>Quality & Reporting Tools</h3>
+            <ul class="skills-list">
+                <li>TrackWise 8.7</li>
+                <li>Crystal Reports</li>
+                <li>Tableau</li>
+                <li>Quicksight</li>
+                <li>JIRA</li>
+                <li>ServiceNow</li>
+            </ul>
+        </div>
+    </section>
+       
 
     <!-- Work Experience Section -->
     <section id="work-experience">
