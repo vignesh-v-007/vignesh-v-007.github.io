@@ -11,6 +11,16 @@ body {
   line-height: 1.6;
   background: #fff;
   color: #333;
+  padding-top: 70px; /* Prevents content from hiding behind the fixed navbar */
+  margin: 0;
+}
+
+
+header {
+  background: #f1f1f1;
+  color: #333;
+  padding: 20px;
+  text-align: center;
 }
 
 .navbar {
@@ -20,31 +30,37 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-}
-
-.navbar .home-link {
-  font-weight: bold;
-  color: #5e5e79; /* Bold blue color for your name */
-  text-decoration: none;
-  font-size: 24px;
+  z-index: 1000;
+  position: fixed;
+  width: 99%; /* Ensures it spans the full width */
+  top: 0;
+  left: 0;
 }
 
 .navbar .nav-links a {
   text-decoration: none;
   color: #333;
   padding-left: 15px;
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 .navbar .nav-links a:hover {
-  text-decoration: underline;
+  color: #111; /* Darker text on hover */
+  background-color: rgba(0, 0, 0, 0.1); /* Light darkening effect */
+  padding: 8px 12px; /* Adds slight padding to make hover effect noticeable */
+  border-radius: 5px;
 }
 
-/* Top header styling */
-header {
-  background: #f1f1f1;
-  color: #333;
-  padding-top: 20px;
-  text-align: center;
+.navbar .home-link {
+  font-weight: bold;
+  color: #5e5e79;
+  text-decoration: none;
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+.navbar .home-link:hover {
+  color: #333; /* Darker shade on hover */
 }
 
 /* Logo or Initials */
@@ -119,24 +135,49 @@ color: #666; /* or any color you prefer */
 margin-bottom: 20px;
 }
 
+.about-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 18px;
+  background-color: #ffffff; /* or the color that matches your style */
+  color: #020000;
+  text-decoration: none;
+  font-weight: bold;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
 .about-links a img {
-height: 20px; /* Example size, adjust as needed */
-width: auto;
-vertical-align: middle;
+  width: 22px;
+  height: 22px;
+  transition: transform 0.3s ease;
 }
 
-.about-links .btn {
-border: none;
-background-color: #ffffff; /* or the color that matches your style */
-color: #020000;
-padding: 10px 20px;
-border-radius: 5px;
-cursor: pointer;
+.about-links a:hover {
+  background-color: #dfe6e9; /* Same hover effect as work experience */
+  transform: scale(1.08);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-.about-links .btn:hover {
-background-color: #639192; /* Darker background on hover */
+.about-links a:hover img {
+  transform: translateX(6px);
 }
+
+.about-links a::after {
+  content: " view";
+  font-size: 13px;
+  font-weight: normal;
+  opacity: 0;
+  color: #333;
+  transition: opacity 0.3s ease;
+}
+
+.about-links a:hover::after {
+  opacity: 1;
+}
+
 
 .btn {
 border: none;
@@ -286,15 +327,45 @@ z-index: 1; /* Ensure line is below dots */
 
 
 .timeline-item {
-  width: 45%; /* Adjust width as needed */
+  width: 45%;
   margin-bottom: 20px;
   position: relative;
   background-color: #ebebeb;
   border: 1px solid #ddd;
   padding: 10px;
-  color: #333; /* Dark grey or black text */
-  box-shadow: 0 3px 6px rgba(0,0,0,0.1); /* Optional: Adds subtle shadow for depth */
+  color: #333;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  cursor: pointer; /* Indicate interactivity */
 }
+
+.timeline-item:hover {
+  transform: scale(1.05);
+  background-color: #dfe6e9; /* Light highlight effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.view-details {
+  font-size: 14px;
+  font-weight: bold;
+  color: #007bff;
+  margin-top: 5px;
+  display: inline-block;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.timeline-item:hover .view-details {
+  color: #0056b3;
+  transform: translateX(5px); /* Small shift to emphasize interactivity */
+}
+
+.timeline-item:hover {
+  transform: scale(1.05);
+  background-color: #dfe6e9;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+
 
 .timeline-item:nth-child(odd) {
   left: 0;
@@ -482,8 +553,9 @@ margin-bottom: 5px; /* Space between list items */
 }
 
 .certification-list li:hover {
-  background-color: #e9e9e9;
-  transform: translateY(-3px);
+  transform: scale(1.05);
+  background-color: #dfe6e9; /* Light highlight effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* Title & Year */
@@ -583,7 +655,53 @@ margin-bottom: 10px !important;
 line-height: 1.6 !important;
 }
 
+/* Role Description */
+.role-description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 15px;
+}
 
+/* Role Skills */
+.role-skills {
+  margin-bottom: 15px;
+}
+
+.role-skills h4 {
+  font-size: 18px;
+  color: #0056b3;
+  margin-bottom: 10px;
+}
+
+.role-skills ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.role-skills li {
+  margin-bottom: 5px;
+}
+
+/* Role Responsibilities */
+.role-responsibilities {
+  margin-bottom: 15px;
+}
+
+.role-responsibilities h4 {
+  font-size: 18px;
+  color: #0056b3;
+  margin-bottom: 10px;
+}
+
+.role-responsibilities ul {
+  list-style-type: decimal;
+  margin-left: 20px;
+}
+
+.role-responsibilities li {
+  margin-bottom: 5px;
+}
 /* Subtle Footer Styles */
 footer {
   background: #f8f8f8; /* Subtle background color */
